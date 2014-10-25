@@ -50,103 +50,104 @@
       </div><!-- / container-fluid -->
     </nav>
 
-    <!-- Pax -->
-    <div class="row">
-      <div class="col-md-12">
-        <div class="panel panel-primary">
-        <div class="panel-heading"><div class="panel-title">PAX</div></div>
-        <div class="panel-body">
-          <!-- Paxリスト -->
-          <table class="table table-striped">
-            <thead>
-              <tr>
-                <th>姓名</th>
-                <th></th>
-                <th></th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>AXESS/TARO</td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-            </tbody>
-          </table>
-          
-        </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ITIN List -->
-    <div class="row">
-      <div class="col-md-12">
-        <div class="panel panel-primary">
-        <div class="panel-heading"><div class="panel-title">旅程情報</div></div>
-        <div class="panel-body">
-          <!-- ボタン -->
-          <div class="btn-group">
-            <button type="button" class="btn btn-primary">AIR</button>
-            <button type="button" class="btn btn-primary">TRANS</button>
-            <button type="button" class="btn btn-primary">HTL</button>
-            <button type="button" class="btn btn-primary">LAND</button>
-            <button type="button" class="btn btn-primary">TOUR</button>
-            <button type="button" class="btn btn-primary">ITIN</button>
+    <!-- BODY -->
+    <div class="container">
+    
+      <!-- Pax -->
+      <div class="row">
+        <div class="col-md-12">
+          <div class="panel panel-primary">
+          <div class="panel-heading"><div class="panel-title">PAX</div></div>
+          <div class="panel-body">
+            <!-- Paxリスト -->
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>姓名</th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>AXESS/TARO</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            
           </div>
-          <!-- 旅程リスト -->
-          <table class="table table-striped" id="tbl-itin-list">
-            <thead>
-              <tr>
-                <!-- CheckBox -->
-                <th style="width:32px;"></th>
-                <th style="width:32px;"></th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              <!-- フライトサマリ -->
-              <tr id="air-summary">
-                <td><input type="checkbox" name="" value=""></td>
-                <td><img data-src="holder.js/30x30/auto/sky/text:JAL"></td>
-                <td>
-                  <div>JAL9999 NRT-HNL 出発日：10/22 00:00</div>
-                </td>
-              </tr>
-              <tr id="air-detail" style="display:none;">
-                <td colspan="3">
-                  <div>フライト詳細                   
-                  </div>
-                  <div style="margin:10px 10px 10px 10px;padding-right:10px;">
-                    <label>予約番号</label>
-                    <input type="text" name="" value="">
-                  </div>
-                  <div style="margin:10px 10px 10px 10px;text-align:right;">
-                    <button type="button" class="button','class':'btn btn-primary btn-sm" id="modify">更新</button>
-                  </div>
-                </td>
-              </tr>
-              <!-- ホテル -->
-              <tr>
-                <td><input type="checkbox" name="" value=""></td>
-                <td><img data-src="holder.js/30x30/auto/vine/text:HTL"></td>
-                <td>
-                  <div>マリーナベイサンズ チェックイン日：2014/10/22</div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          
-        </div>
+          </div>
         </div>
       </div>
-    </div>
 
-
-    </div>
-
+      <!-- ITIN List -->
+      <div class="row">
+        <div class="col-md-12">
+          <div class="panel panel-primary">
+          <div class="panel-heading"><div class="panel-title">旅程情報</div></div>
+          <div class="panel-body">
+            <!-- ボタン -->
+            <div class="btn-group">
+              <button type="button" class="btn btn-primary">AIR</button>
+              <button type="button" class="btn btn-primary">TRANS</button>
+              <button type="button" class="btn btn-primary">HTL</button>
+              <button type="button" class="btn btn-primary">LAND</button>
+              <button type="button" class="btn btn-primary">TOUR</button>
+              <button type="button" class="btn btn-primary">ITIN</button>
+            </div>
+            <!-- 旅程リスト -->
+            <table class="table table-striped" id="tbl-itin-list">
+              <thead>
+                <tr>
+                  <!-- CheckBox -->
+                  <th style="width:32px;"></th>
+                  <th style="width:32px;"></th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- フライトサマリ -->
+                <tr id="air-summary">
+                  <td><input type="checkbox" name="" value=""></td>
+                  <td><img data-src="holder.js/30x30/auto/sky/text:JAL"></td>
+                  <td>
+                    <div>JAL9999 NRT-HNL 出発日：10/22 00:00</div>
+                  </td>
+                </tr>
+                <tr id="air-detail" style="display:none;">
+                  <td colspan="3">
+                    <div>フライト詳細                   
+                    </div>
+                    <div style="margin:10px 10px 10px 10px;padding-right:10px;">
+                      <label>予約番号</label>
+                      <input type="text" name="" value="">
+                    </div>
+                    <div style="margin:10px 10px 10px 10px;text-align:right;">
+                      <button type="button" class="button','class':'btn btn-primary btn-sm" id="modify">更新</button>
+                    </div>
+                  </td>
+                </tr>
+                <!-- ホテル -->
+                <tr>
+                  <td><input type="checkbox" name="" value=""></td>
+                  <td><img data-src="holder.js/30x30/auto/vine/text:HTL"></td>
+                  <td>
+                    <div>マリーナベイサンズ チェックイン日：2014/10/22</div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            
+          </div>
+          </div>
+        </div>
+      </div> <!-- /ITIN List -->
+    
+    </div> <!-- /container -->
 
     <!-- Footer -->
     <div class="footer">Footer</div>
