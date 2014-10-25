@@ -50,6 +50,11 @@
       </div><!-- / container-fluid -->
     </nav>
 
+    <ul class="breadcrumb">
+        <li><a href="#">予約管理</a><span class="divider"></span></li>
+        <li class="active">お客さまカルテ</li>
+    </ul>
+
     <!-- BODY -->
     <div class="container">
     
@@ -91,14 +96,16 @@
           <div class="panel-heading"><div class="panel-title">旅程情報</div></div>
           <div class="panel-body">
             <!-- ボタン -->
-            <div class="btn-group">
-              <button type="button" class="btn btn-primary">AIR</button>
-              <button type="button" class="btn btn-primary">TRANS</button>
-              <button type="button" class="btn btn-primary">HTL</button>
-              <button type="button" class="btn btn-primary">LAND</button>
-              <button type="button" class="btn btn-primary">TOUR</button>
-              <button type="button" class="btn btn-primary">ITIN</button>
+            <div class="btn-group" data-toggle="buttons">
+              <button type="checkbox" class="btn btn-primary">AIR</button>
+              <button type="checkbox" class="btn btn-primary">TRANS</button>
+              <button type="checkbox" class="btn btn-primary">HTL</button>
+              <button type="checkbox" class="btn btn-primary">LAND</button>
+              <button type="checkbox" class="btn btn-primary">TOUR</button>
+              <button type="checkbox" class="btn btn-primary">ITIN</button>
             </div>
+
+            
             <!-- 旅程リスト -->
             <table class="table table-striped" id="tbl-itin-list">
               <thead>
@@ -118,14 +125,86 @@
                     <div>JAL9999 NRT-HNL 出発日：10/22 00:00</div>
                   </td>
                 </tr>
+                <!-- フライト詳細 -->
                 <tr id="air-detail" style="display:none;">
                   <td colspan="3">
-                    <div>フライト詳細                   
-                    </div>
-                    <div style="margin:10px 10px 10px 10px;padding-right:10px;">
-                      <label>予約番号</label>
-                      <input type="text" name="" value="">
-                    </div>
+                    <div>フライト詳細</div>
+                    <form class="form-inline" role="form">
+                      <div class="form-group">
+                        <!-- 予約番号 -->
+                        <label class="control-label" for="pnrrefno">予約番号</label>
+                        <input type="text" class="form-control" id="pnrrefno" style="width:100px;" value="ABCDEF">
+                        <!-- 便名 -->
+                        <label class="control-label" for="pnrrefno">便名</label>
+                        <input type="text" class="form-control" id="pnrrefno" style="width:100px;" value="JL0001">
+                        <!-- クラス -->
+                        <label class="control-label" for="pnrrefno">クラス</label>
+                        <select class="form-control">
+                          <option>Y</option>
+                          <option>C</option>
+                          <option>F</option>
+                        </select>
+                        <!-- 搭乗日 -->
+                        <label class="control-label" for="pnrrefno">搭乗日</label>
+                        <input type="text" class="form-control" id="pnrrefno" style="width:100px;" value="JL0001">
+                        <!-- 出発地 -->
+                        <label class="control-label" for="pnrrefno">出発地</label>
+                        <div class="input-group">
+                          <input type="text" class="form-control" id="pnrrefno" style="width:70px;" value="NRT">
+                          <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">Go!</button>
+                          </span>
+                        </div>
+                        <!-- 到着日 -->
+                        <label class="control-label" for="pnrrefno">到着日</label>
+                        <input type="text" class="form-control" id="pnrrefno" style="width:100px;" value="JL0001">
+                        <!-- 到着地 -->
+                        <label class="control-label" for="pnrrefno">到着地</label>
+                        <div class="input-group">
+                          <input type="text" class="form-control" id="pnrrefno" style="width:70px;" value="HNL">
+                          <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">Go!</button>
+                          </span>
+                        </div>
+                      <div class="form-group">
+                        <!-- 予約番号 -->
+                        <label class="control-label" for="pnrrefno">予約番号</label>
+                        <input type="text" class="form-control" id="pnrrefno" style="width:100px;" value="ABCDEF">
+                        <!-- 便名 -->
+                        <label class="control-label" for="pnrrefno">便名</label>
+                        <input type="text" class="form-control" id="pnrrefno" style="width:100px;" value="JL0001">
+                        <!-- クラス -->
+                        <label class="control-label" for="pnrrefno">クラス</label>
+                        <select class="form-control">
+                          <option>Y</option>
+                          <option>C</option>
+                          <option>F</option>
+                        </select>
+                        <!-- 搭乗日 -->
+                        <label class="control-label" for="pnrrefno">搭乗日</label>
+                        <input type="text" class="form-control" id="pnrrefno" style="width:100px;" value="JL0001">
+                        <!-- 出発地 -->
+                        <label class="control-label" for="pnrrefno">出発地</label>
+                        <div class="input-group">
+                          <input type="text" class="form-control" id="pnrrefno" style="width:70px;" value="NRT">
+                          <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">Go!</button>
+                          </span>
+                        </div>
+                        <!-- 到着日 -->
+                        <label class="control-label" for="pnrrefno">到着日</label>
+                        <input type="text" class="form-control" id="pnrrefno" style="width:100px;" value="JL0001">
+                        <!-- 到着地 -->
+                        <label class="control-label" for="pnrrefno">到着地</label>
+                        <div class="input-group">
+                          <input type="text" class="form-control" id="pnrrefno" style="width:70px;" value="HNL">
+                          <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">Go!</button>
+                          </span>
+                        </div>
+
+                      </div>
+                    </form>
                     <div style="margin:10px 10px 10px 10px;text-align:right;">
                       <button type="button" class="button','class':'btn btn-primary btn-sm" id="modify">更新</button>
                     </div>
