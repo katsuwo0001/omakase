@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>おまかせくん</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- holder.js -->
+    <script src="js/holder.js"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <!-- ヘッダー項目 -->
+    <div class="header">
+      <h1>おまかせくん</h1>
+    </div>
+
+    <!-- ナビゲーションバー -->
+    <nav class="navbar navbar-inverse" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <!-- 画面幅が短い時に表示される開閉ボタン -->
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-home"></span></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">予約管理<span class="caret"></span></a></li>
+            <li class="active"><a href="#">手配管理<span class="caret"></span></a></li>
+            <li class="active"><a href="#">経営分析<span class="caret"></span></a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- / container-fluid -->
+    </nav>
+
+    <!--  -->
+    <div class="row">
+      <!-- Side Menu -->
+      <div class="col-md-3">
+        <div class="panel panel-primary">
+          <div class="panel-heading">hogehoge</div>
+          <div class="panel-body">
+            <ul class="nav nav-sidebar">
+              <li class="active"><a href="#">Overview</a></li>
+              <li><a href="#">Reports<span class="badge alert-danger">5</span></a></li>
+              <li><a href="#">Analytics<span class="badge alert-danger">5</span></a></li>
+              <li><a href="#">Export<span class="badge alert-danger">5</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-9">
+        <!-- Infomation -->
+        <div class="alert alert-danger" role="alert">
+          <span class="glyphicon glyphicon-exclamation-sign" style="padding:0px 20px 0px 0px;font-size:20px;"></span>
+          注意！！注意！！注意！！注意！！注意！！注意！！注意！！注意！！注意！！注意！！
+        </div> <!-- /Infromation -->
+
+        <!-- 今日やること -->
+        <div class="row">
+          <div class="col-md-12">
+            <div class="panel panel-primary">
+              <div class="panel-heading">今日やること</div>
+              <div class="panel-body"></div>
+            </div>
+          </div>
+        </div>
+        <!-- / 今日やること -->
+
+        <!-- Main Button -->
+        <div class="row">
+          <!-- 予約管理 -->
+          <div class="col-md-3">
+            <div class="panel panel-primary">
+              <div class="panel-body">
+                <!-- title -->
+                <div style="float:left;">
+                  <img data-src="holder.js/100x100/auto/sky/text:予約管理">
+                </div>
+                <div style="float:left;padding-left:20px;">
+                  <h3>予約管理</h3>
+                </div>
+
+                <!-- Link -->
+                <div style="clear:both;padding-top:20px;">
+                  <a href="#">hogehoge<span class="glyphicon glyphicon-play" style="padding-left:10px;"></span></a><br>
+                  <a href="#">hogehoge<span class="glyphicon glyphicon-play" style="padding-left:10px;"></span></a><br>
+                  <a href="#">hogehoge<span class="glyphicon glyphicon-play" style="padding-left:10px;"></span></a><br>
+                  <a href="#">hogehoge<span class="glyphicon glyphicon-play" style="padding-left:10px;"></span></a><br>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 手配管理 -->
+          <div class="col-md-3">
+            <div class="panel panel-primary">
+              <div class="panel-body">
+                <!-- title -->
+                <div style="float:left;">
+                  <img data-src="holder.js/100x100/auto/vine/text:手配管理">
+                </div>
+                <div style="float:left;padding-left:20px;">
+                  <h3>手配管理</h3>
+                </div>
+
+                <!-- Link -->
+                <div style="clear:both;padding-top:20px;">
+                  <a href="#">hogehoge<span class="glyphicon glyphicon-play" style="padding-left:10px;"></span></a><br>
+                  <a href="#">hogehoge<span class="glyphicon glyphicon-play" style="padding-left:10px;"></span></a><br>
+                  <a href="#">hogehoge<span class="glyphicon glyphicon-play" style="padding-left:10px;"></span></a><br>
+                  <a href="#">hogehoge<span class="glyphicon glyphicon-play" style="padding-left:10px;"></span></a><br>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 経営分析 -->
+          <div class="col-md-3">
+            <div class="panel panel-primary">
+              <div class="panel-body">
+                <!-- title -->
+                <div style="float:left;">
+                  <img data-src="holder.js/100x100/auto/lava/text:経営分析">
+                </div>
+                <div style="float:left;padding-left:20px;">
+                  <h3>経営分析</h3>
+                </div>
+
+                <!-- Link -->
+                <div style="clear:both;padding-top:20px;">
+                  <a href="#">hogehoge<span class="glyphicon glyphicon-play" style="padding-left:10px;"></span></a><br>
+                  <a href="#">hogehoge<span class="glyphicon glyphicon-play" style="padding-left:10px;"></span></a><br>
+                  <a href="#">hogehoge<span class="glyphicon glyphicon-play" style="padding-left:10px;"></span></a><br>
+                  <a href="#">hogehoge<span class="glyphicon glyphicon-play" style="padding-left:10px;"></span></a><br>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 管理者 -->
+          <div class="col-md-3">
+            <div class="panel panel-primary">
+              <div class="panel-body">
+                <!-- title -->
+                <div style="float:left;">
+                  <img data-src="holder.js/100x100/auto/industrial/text:管理者">
+                </div>
+                <div style="float:left;padding-left:20px;">
+                  <h3>管理者</h3>
+                </div>
+
+                <!-- Link -->
+                <div style="clear:both;padding-top:20px;">
+                  <a href="#">hogehoge<span class="glyphicon glyphicon-play" style="padding-left:10px;"></span></a><br>
+                  <a href="#">hogehoge<span class="glyphicon glyphicon-play" style="padding-left:10px;"></span></a><br>
+                  <a href="#">hogehoge<span class="glyphicon glyphicon-play" style="padding-left:10px;"></span></a><br>
+                  <a href="#">hogehoge<span class="glyphicon glyphicon-play" style="padding-left:10px;"></span></a><br>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- / Main Button -->
+        
+        <div class="row">
+          <div class="col-md-6">
+            <div class="panel panel-primary">
+              <div class="panel-heading">AXESS 情報</div>
+              <div class="panel-body"></div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="panel panel-primary">
+              <div class="panel-heading">AXESS 情報</div>
+              <div class="panel-body"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- /row -->
+
+    <!-- Footer -->
+    <div class="footer">Footer</div>
+
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

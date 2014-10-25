@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>おまかせくん</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <!-- holder.js -->
+    <script src="../js/holder.js"></script>
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>   
+  <body>
+    <!-- ヘッダー項目 -->
+    <div class="header">
+      <h1>おまかせくん</h1>
+    </div>
+
+    <!-- ナビゲーションバー -->
+    <nav class="navbar navbar-inverse" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <!-- 画面幅が短い時に表示される開閉ボタン -->
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-home"></span></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">予約管理<span class="caret"></span></a></li>
+            <li class="active"><a href="#">手配管理<span class="caret"></span></a></li>
+            <li class="active"><a href="#">経営分析<span class="caret"></span></a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- / container-fluid -->
+    </nav>
+
+    <!-- Pax -->
+    <div class="row">
+      <div class="col-md-12">
+        <div class="panel panel-primary">
+        <div class="panel-heading"><div class="panel-title">PAX</div></div>
+        <div class="panel-body">
+          <!-- Paxリスト -->
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>姓名</th>
+                <th></th>
+                <th></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>AXESS/TARO</td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ITIN List -->
+    <div class="row">
+      <div class="col-md-12">
+        <div class="panel panel-primary">
+        <div class="panel-heading"><div class="panel-title">旅程情報</div></div>
+        <div class="panel-body">
+          <!-- ボタン -->
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary">AIR</button>
+            <button type="button" class="btn btn-primary">TRANS</button>
+            <button type="button" class="btn btn-primary">HTL</button>
+            <button type="button" class="btn btn-primary">LAND</button>
+            <button type="button" class="btn btn-primary">TOUR</button>
+            <button type="button" class="btn btn-primary">ITIN</button>
+          </div>
+          <!-- 旅程リスト -->
+          <table class="table table-striped" id="tbl-itin-list">
+            <thead>
+              <tr>
+                <!-- CheckBox -->
+                <th style="width:32px;"></th>
+                <th style="width:32px;"></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- フライトサマリ -->
+              <tr>
+                <td><input type="checkbox" name="" value=""></td>
+                <td><img data-src="holder.js/30x30/auto/sky/text:JAL"></td>
+                <td>
+                  <div>JAL9999 NRT-HNL 出発日：10/22 00:00</div>
+                </td>
+              </tr>
+              <!-- ホテル -->
+              <tr>
+                <td><input type="checkbox" name="" value=""></td>
+                <td><img data-src="holder.js/30x30/auto/vine/text:HTL"></td>
+                <td>
+                  <div>マリーナベイサンズ チェックイン日：2014/10/22</div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          
+        </div>
+        </div>
+      </div>
+    </div>
+
+
+    </div>
+
+
+    <!-- Footer -->
+    <div class="footer">Footer</div>
+
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- おまかせくん共通 -->
+    <script src="../js/omakase.js" type="text/javascript" charset="utf-8" ></script>
+  </body>
+</html>
