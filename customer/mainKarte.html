@@ -108,11 +108,24 @@
             </thead>
             <tbody>
               <!-- フライトサマリ -->
-              <tr>
+              <tr id="air-summary">
                 <td><input type="checkbox" name="" value=""></td>
                 <td><img data-src="holder.js/30x30/auto/sky/text:JAL"></td>
                 <td>
                   <div>JAL9999 NRT-HNL 出発日：10/22 00:00</div>
+                </td>
+              </tr>
+              <tr id="air-detail" style="display:none;">
+                <td colspan="3">
+                  <div>フライト詳細                   
+                  </div>
+                  <div style="margin:10px 10px 10px 10px;padding-right:10px;">
+                    <label>予約番号</label>
+                    <input type="text" name="" value="">
+                  </div>
+                  <div style="margin:10px 10px 10px 10px;text-align:right;">
+                    <button type="button" class="button','class':'btn btn-primary btn-sm" id="modify">更新</button>
+                  </div>
                 </td>
               </tr>
               <!-- ホテル -->
