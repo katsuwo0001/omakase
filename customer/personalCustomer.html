@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>おまかせくん 個人顧客カード</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <!-- holder.js -->
+    <script src="../js/holder.js"></script>
+    <!-- Original CSS -->
+    <link href="../css/omakase.css" rel="stylesheet">
+    <link href="../css/personalCustomer.css" rel="stylesheet">
+
+  </head>   
+  <body>
+    <!-- ヘッダー項目 -->
+    <div class="header">
+      <h1>おまかせくん</h1>
+    </div>
+
+    <!-- ナビゲーションバー -->
+    <nav class="navbar navbar-inverse" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <!-- 画面幅が短い時に表示される開閉ボタン -->
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-home"></span></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">予約管理<span class="caret"></span></a></li>
+            <li class="active"><a href="#">手配管理<span class="caret"></span></a></li>
+            <li class="active"><a href="#">経営分析<span class="caret"></span></a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- / container-fluid -->
+    </nav>
+
+    <ul class="breadcrumb">
+        <li><a href="#">予約管理</a><span class="divider"></span></li>
+        <li>個人顧客カード</li>
+    </ul>
+
+    <!-- BODY -->
+    <div class="container">
+      <div style="overflow: hidden;">
+        <div style="float:left">
+          <button class="btn btn-info btn-sm">印刷</button>
+          <button class="btn btn-info btn-sm">複写</button>
+        </div>
+
+        <div style="float:right;">
+          <a href="personalOrderHistory.html" class="btn btn-info btn-sm" role="button">利用履歴</a>
+        </div>
+      </div>
+
+      <!-- 基本情報部 Start -->
+      <h4 class="text-center bg-primary">基本情報</h4>
+      <form class="form-horizontal slim-padding" role="form">
+        <div class="form-group">
+          <label for="" class="control-label col-md-1">顧客NO.</label>
+          <div class="col-md-1">
+            <p class="form-control-static">xxxxxxxxxx</p>
+          </div>
+          <label for="" class="control-label col-md-1">氏名</label>
+          <div class="col-md-2">
+            <div class="input-group">
+              <input type="text" class="form-control form-sm" value="山田　太郎">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button">...</button>
+              </span>
+            </div>
+          </div>
+          <label for="" class="col-md-1 control-label">作成日</label>
+          <div class="col-md-1"><p class="form-control-static">2014/11/11</p></div>
+          <label for="" class="col-md-1 control-label">更新日</label>
+          <div class="col-md-1"><p class="form-control-static">2014/11/11</p></div>
+          <label for="" class="col-md-1 control-label">利用回数</label>
+          <div class="col-md-1"><p class="form-control-static text-right">1</p></div>
+        </div>
+
+        <div class="form-group">
+          <label for="" class="control-label col-md-1">顧客名国際</label>
+          <div class="col-md-2"><input type="text" class="form-control" value="YAMADA TARO"></div>
+          <label for="" class="control-label col-md-1">氏名</label>
+          <div class="col-md-2"><input type="text" class="form-control" value="山田　太郎"></div>
+          <label for="" class="control-label col-md-1">性別</label>
+          <div class="col-md-1">
+            <select name="" id="" class="form-control form-sm">
+              <option value="">男</option>
+              <option value="">女</option>
+            </select>
+          </div>
+          <label for="" class="control-label col-md-1">顧客ランク</label>
+          <div class="col-md-1">
+            <select name="" id="" class="form-control form-sm">
+              <option value=""></option>
+            </select>
+          </div>
+          <label for="" class="control-label col-md-1">DM</label>
+          <div class="col-md-1">
+            <select name="" id="" class="form-control form-sm">
+              <option value="">可</option>
+              <option value="">不可</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="" class="control-label col-md-1">顧客名国内</label>
+          <div class="col-md-2"><input type="text" class="form-control" value="YAMADA TARO"></div>
+          <label for="" class="control-label col-md-1">フリガナ</label>
+          <div class="col-md-2"><input type="text" class="form-control" value="ヤマダ　タロウ"></div>
+          <label for="" class="control-label col-md-1">敬称</label>
+          <div class="col-md-1">
+            <select name="" id="" class="form-control form-sm">
+              <option value="">Mr.</option>
+              <option value="">Ms.</option>
+            </select>
+          </div>
+          <label for="" class="control-label col-md-1">生年月日</label>
+          <div class="col-md-1"><input type="text" class="form-control" value="1994/10/10"></div>
+          <p class="form-control-static col-md-1">20才</p>
+        </div>
+
+        <div class="form-group">
+          <label for="" class="control-label col-md-1"></label>
+          <label for="" class="control-label col-md-1">郵便番号</label>
+          <div class="col-md-1"><input type="text" class="form-control" value="111-0000"></div>
+          <div class="col-md-1"><button>住所検索</button></div>
+          <label for="" class="control-label col-md-1">都道府県</label>
+          <div class="col-md-1"><input type="text" class="form-control" value="東京都"></div>
+          <div class="col-md-3"><input type="text" class="form-control" value="品川区南大井6-12-10"></div>
+          <div class="col-md-3"><input type="text" class="form-control" value="ITCビル"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="" class="control-label col-md-1">現住所</label>
+          <label for="" class="control-label col-md-1">英字</label>
+          <div class="col-md-5"><input type="text" class="form-control" value=""></div>
+          <div class="col-md-5"><input type="text" class="form-control" value=""></div>
+        </div>
+
+        <div class="form-group">
+          <label for="" class="control-label col-md-1"></label>
+          <label for="" class="control-label col-md-1">カナ</label>
+          <div class="col-md-5"><input type="text" class="form-control" value=""></div>
+          <div class="col-md-5"><input type="text" class="form-control" value=""></div>
+        </div>
+
+        <div class="form-group">
+          <label for="" class="control-label col-md-1">パスポート</label>
+          <label for="" class="control-label col-md-1">NO.</label>
+          <div class="col-md-1"><input type="text" class="form-control" value=""></div>
+          <label for="" class="control-label col-md-1">発行日</label>
+          <div class="col-md-1"><input type="text" class="form-control" value=""></div>
+          <label for="" class="control-label col-md-1">有効期限</label>
+          <p class="form-control-static col-md-1"></p>
+          <label for="" class="control-label col-md-1">残存期間</label>
+          <p class="form-control-static col-md-1"></p>
+          <label for="" class="control-label col-md-1">発給地</label>
+          <div class="col-md-2"><input type="text" class="form-control" value="TOKYO"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="" class="control-label col-md-1">国籍</label>
+          <div class="col-md-1">
+            <div class="input-group">
+              <input type="text" class="form-control form-sm" value="JP">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button">...</button>
+              </span>
+            </div>
+          </div>
+          <p class="form-control-static col-md-2">日本</p>
+          <p class="form-control-static col-md-2">JAPAN</p>
+          <label for="" class="control-label col-md-1">出生地</label>
+          <div class="col-md-2"><input type="text" class="form-control" value="HOKKAIDO"></div>
+          <label for="" class="control-label col-md-2">外国人登録証NO.</label>
+          <div class="col-md-1"><input type="text" class="form-control" value=""></div>
+        </div>
+
+        <div class="form-group">
+          <label for="" class="control-label col-md-1">婚姻</label>
+          <div class="col-md-1">
+            <select name="" id="" class="form-control form-sm">
+              <option value="">既婚</option>
+              <option value="">未婚</option>
+            </select>
+          </div>
+          <label for="" class="control-label col-md-1">旧姓</label>
+          <div class="col-md-1"><input type="text" class="form-control" value=""></div>
+          <label for="" class="control-label col-md-1">ミドルネーム</label>
+          <div class="col-md-2"><input type="text" class="form-control" value=""></div>
+          <label for="" class="control-label col-md-1">職業</label>
+          <div class="col-md-1">
+            <div class="input-group">
+              <input type="text" class="form-control form-sm" value="004">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button">...</button>
+              </span>
+            </div>
+          </div>
+          <p class="form-control-static col-md-1">主婦</p>
+          <p class="form-control-static col-md-1">HOUSEWIFE</p>
+        </div>
+
+      </form>
+      <!-- 基本情報部 End -->
+
+      <!-- 連絡先 Start -->
+      <div class="row">
+        <div class="col-md-6" style="padding-top:65px;">
+          <h4 class="bg-primary" style="position:absolute;top:0px;width:98%;text-align:center;">連絡先</h4>
+          <div style="overflow:auto;height:150px;">
+            <table class="table">
+              <colgroup style="width:30px;"></colgroup>
+              <colgroup style="width:100px;"></colgroup>
+              <colgroup style="width:150px;"></colgroup>
+              <colgroup style="width:90px;"></colgroup>
+              <colgroup style="width:180px;"></colgroup>
+              <thead style="position:absolute;top:30px;">
+                <tr>
+                  <th style="width:30px;"></th>
+                  <th style="width:100px;">種別</th>
+                  <th style="width:150px;">連絡先</th>
+                  <th style="width:90px;">問合せ</th>
+                  <th style="width:180px;">連絡メモ</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>
+                    <select name="" id="" class="form-control">
+                      <option value=""></option>
+                      <option value="" selected>自宅</option>
+                      <option value="">携帯</option>
+                      <option value="">会社</option>
+                      <option value="">FAX</option>
+                      <option value="">E-Mail</option>
+                    </select>
+                  </td>
+                  <td><input type="text" class="form-control" value="03-xxxx-xxxx"></td>
+                  <td>
+                    <select name="" id="" class="form-control">
+                      <option value=""></option>
+                      <option value="" selected>可</option>
+                      <option value="">不可</option>
+                    </select>
+                  </td>
+                  <td><input type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>
+                    <select name="" id="" class="form-control">
+                      <option value=""></option>
+                      <option value="">自宅</option>
+                      <option value="" selected>携帯</option>
+                      <option value="">会社</option>
+                      <option value="">FAX</option>
+                      <option value="">E-Mail</option>
+                    </select>
+                  </td>
+                  <td><input type="text" class="form-control" value="03-xxxx-xxxx"></td>
+                  <td>
+                    <select name="" id="" class="form-control">
+                      <option value=""></option>
+                      <option value="" selected>可</option>
+                      <option value="">不可</option>
+                    </select>
+                  </td>
+                  <td><input type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>
+                    <select name="" id="" class="form-control">
+                      <option value=""></option>
+                      <option value="">自宅</option>
+                      <option value="">携帯</option>
+                      <option value="" selected>会社</option>
+                      <option value="">FAX</option>
+                      <option value="">E-Mail</option>
+                    </select>
+                  </td>
+                  <td><input type="text" class="form-control" value="03-xxxx-xxxx"></td>
+                  <td>
+                    <select name="" id="" class="form-control">
+                      <option value=""></option>
+                      <option value="" selected>可</option>
+                      <option value="">不可</option>
+                    </select>
+                  </td>
+                  <td><input type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>
+                    <select name="" id="" class="form-control">
+                      <option value=""></option>
+                      <option value="" selected>自宅</option>
+                      <option value="">携帯</option>
+                      <option value="">会社</option>
+                      <option value="">FAX</option>
+                      <option value="">E-Mail</option>
+                    </select>
+                  </td>
+                  <td><input type="text" class="form-control" value="03-xxxx-xxxx"></td>
+                  <td>
+                    <select name="" id="" class="form-control">
+                      <option value=""></option>
+                      <option value="" selected>可</option>
+                      <option value="">不可</option>
+                    </select>
+                  </td>
+                  <td><input type="text" class="form-control"></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>
+                    <select name="" id="" class="form-control">
+                      <option value=""></option>
+                      <option value="" selected>自宅</option>
+                      <option value="">携帯</option>
+                      <option value="">会社</option>
+                      <option value="">FAX</option>
+                      <option value="">E-Mail</option>
+                    </select>
+                  </td>
+                  <td><input type="text" class="form-control" value="03-xxxx-xxxx"></td>
+                  <td>
+                    <select name="" id="" class="form-control">
+                      <option value=""></option>
+                      <option value="" selected>可</option>
+                      <option value="">不可</option>
+                    </select>
+                  </td>
+                  <td><input type="text" class="form-control"></td>
+                </tr>
+              </tbody>
+            </table>
+
+            <button type="button" class="btn btn-danger btn-sm" style="margin-left:10px;">削除</button>
+            <button type="button" class="btn btn-info btn-sm pull-right" style="margin-right:10px;">行追加</button>
+
+          </div>
+        </div>
+        <!-- 連絡先 End -->
+
+        <!-- ご家族情報 Start -->
+        <div class="col-md-6" style="padding-top:65px;">
+          <h4 class="bg-primary" style="position:absolute;top:0px;width:98%;text-align:center;">ご家族情報</h4>
+          <div style="overflow:auto;height:150px;">
+            <table class="table">
+              <colgroup style="width:30px;"></colgroup>
+              <colgroup style="width:300px;"></colgroup>
+              <colgroup style="width:70px;"></colgroup>
+              <colgroup style="width:100px;"></colgroup>
+              <thead style="position:absolute;top:30px;">
+                <tr>
+                  <th style="width:30px;"></th>
+                  <th style="width:300px;">ご家族氏名</th>
+                  <th style="width:70px;"></th>
+                  <th style="width:100px;">続柄</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>
+                    <input type="text" class="form-control form-sm" value="山田　花子">
+                  </td>
+                  <td><button class="btn btn-default">...</button></td>
+                  <td>
+                    <select name="" id="" class="form-control">
+                      <option value=""></option>
+                      <option value="" selected>妻</option>
+                      <option value="">息子</option>
+                      <option value="">娘</option>
+                    </select>
+                  </td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+
+            <button type="button" class="btn btn-danger btn-sm" style="margin-left:10px;">削除</button>
+            <button type="button" class="btn btn-info btn-sm pull-right" style="margin-right:10px;">行追加</button>
+          </div>
+        </div>
+
+      </div>
+      <!-- ご家族情報 End -->
+
+      <!-- 勤務先 Start -->
+      <h4 class="text-center bg-primary">勤務先</h4>
+      <form class="form-horizontal slim-padding" role="form">
+
+        <div class="form-group">
+          <label for="" class="control-label col-md-1">法人コード</label>
+          <div class="col-md-2">
+            <div class="input-group">
+              <input type="text" class="form-control form-sm" value="0000000000">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button">...</button>
+              </span>
+            </div>
+          </div>
+          <label for="" class="control-label col-md-1">TEL <input type="checkbox"></label>
+          <div class="col-md-2"><input type="text" class="form-control" value=""></div>
+          <label for="" class="control-label col-md-1">内線</label>
+          <div class="col-md-1"><input type="text" class="form-control" value=""></div>
+          <label for="" class="control-label col-md-1">FAX</label>
+          <div class="col-md-2"><input type="text" class="form-control" value=""></div>
+          <div class="col-md-1">
+            <select name="" id="" class="form-control">
+              <option value=""></option>
+              <option value="" selected>代表番号</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="" class="control-label col-md-1"></label>
+          <label for="" class="control-label col-md-1">漢字</label>
+          <div class="col-md-3"><input type="text" class="form-control" value=""></div>
+          <label for="" class="control-label col-md-1"></label>
+          <label for="" class="control-label col-md-1">漢字</label>
+          <div class="col-md-3"><input type="text" class="form-control" value=""></div>
+        </div>
+
+        <div class="form-group">
+          <label for="" class="control-label col-md-1">法人名</label>
+          <label for="" class="control-label col-md-1">英字</label>
+          <div class="col-md-3"><input type="text" class="form-control" value=""></div>
+          <label for="" class="control-label col-md-1">部署名</label>
+          <label for="" class="control-label col-md-1">英字</label>
+          <div class="col-md-3"><input type="text" class="form-control" value=""></div>
+        </div>
+
+        <div class="form-group">
+          <label for="" class="control-label col-md-1"></label>
+          <label for="" class="control-label col-md-1">カナ</label>
+          <div class="col-md-3"><input type="text" class="form-control" value=""></div>
+          <label for="" class="control-label col-md-1"></label>
+          <label for="" class="control-label col-md-1">カナ</label>
+          <div class="col-md-3"><input type="text" class="form-control" value=""></div>
+        </div>
+
+        <div class="form-group">
+          <label for="" class="control-label col-md-1">役職</label>
+          <div class="col-md-1">
+            <div class="input-group">
+              <input type="text" class="form-control form-sm" value="011">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button">...</button>
+              </span>
+            </div>
+          </div>
+          <p class="form-control-static col-md-2">マネージャ</p>
+          <p class="form-control-static col-md-2">Manager</p>
+          <label for="" class="control-label col-md-1">カード番号</label>
+          <div class="col-md-2"><input type="text" class="form-control" value=""></div>
+          <label for="" class="control-label col-md-1">カード期限</label>
+          <div class="col-md-2"><input type="text" class="form-control" value=""></div>
+        </div>
+
+        <div class="form-group">
+          <label for="" class="control-label col-md-1"></label>
+          <label for="" class="control-label col-md-1">郵便番号</label>
+          <div class="col-md-1"><input type="text" class="form-control" value="111-0000"></div>
+          <div class="col-md-1"><button>住所検索</button></div>
+          <label for="" class="control-label col-md-1">都道府県</label>
+          <div class="col-md-1"><input type="text" class="form-control" value="東京都"></div>
+          <div class="col-md-3"><input type="text" class="form-control" value="品川区南大井6-12-10"></div>
+          <div class="col-md-3"><input type="text" class="form-control" value="ITCビル"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="" class="control-label col-md-1">勤務先住所</label>
+          <label for="" class="control-label col-md-1">英字</label>
+          <div class="col-md-5"><input type="text" class="form-control" value=""></div>
+          <div class="col-md-5"><input type="text" class="form-control" value=""></div>
+        </div>
+
+        <div class="form-group">
+          <label for="" class="control-label col-md-1"></label>
+          <label for="" class="control-label col-md-1">カナ</label>
+          <div class="col-md-5"><input type="text" class="form-control" value=""></div>
+          <div class="col-md-5"><input type="text" class="form-control" value=""></div>
+        </div>
+
+      </form>
+      <!-- 勤務先 End -->
+
+      <!-- 連絡先 Start -->
+      <h4 class="text-center bg-primary">連絡先</h4>
+      <form class="form-horizontal slim-padding" role="form">
+
+        <div class="form-group">
+          <label for="" class="control-label col-md-1">氏名</label>
+          <div class="col-md-2"><input type="text" class="form-control" value="山田　裕"></div>
+          <label for="" class="control-label col-md-1">続柄</label>
+          <div class="col-md-2"><input type="text" class="form-control" value="父"></div>
+          <label for="" class="control-label col-md-1">TEL</label>
+          <div class="col-md-2"><input type="text" class="form-control" value="03-1234-5678"></div>
+          <label for="" class="control-label col-md-1">FAX</label>
+          <div class="col-md-2"><input type="text" class="form-control" value="03-1234-5678"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="" class="control-label col-md-1">住所</label>
+          <label for="" class="control-label col-md-1">郵便番号</label>
+          <div class="col-md-1"><input type="text" class="form-control" value="111-0000"></div>
+          <div class="col-md-1"><button>住所検索</button></div>
+          <label for="" class="control-label col-md-1">都道府県</label>
+          <div class="col-md-1"><input type="text" class="form-control" value="東京都"></div>
+          <div class="col-md-3"><input type="text" class="form-control" value="品川区南大井6-12-10"></div>
+          <div class="col-md-3"><input type="text" class="form-control" value="ITCビル"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="" class="control-label col-md-1">本籍地</label>
+          <label for="" class="control-label col-md-1">郵便番号</label>
+          <div class="col-md-1"><input type="text" class="form-control" value="111-0000"></div>
+          <div class="col-md-1"><button>住所検索</button></div>
+          <label for="" class="control-label col-md-1">都道府県</label>
+          <div class="col-md-1"><input type="text" class="form-control" value="東京都"></div>
+          <div class="col-md-3"><input type="text" class="form-control" value="品川区南大井6-12-10"></div>
+          <div class="col-md-3"><input type="text" class="form-control" value="ITCビル"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="" class="control-label col-md-1"></label>
+          <label for="" class="control-label col-md-1">英字</label>
+          <div class="col-md-5"><input type="text" class="form-control" value=""></div>
+          <div class="col-md-5"><input type="text" class="form-control" value=""></div>
+        </div>
+
+        <div class="form-group">
+          <label for="" class="control-label col-md-1">配偶者</label>
+          <div class="col-md-2"><input type="text" class="form-control" value="YAMADA HANAKO"></div>
+          <div class="col-md-2"><input type="text" class="form-control" value="山田　花子"></div>
+          <label for="" class="control-label col-md-1">生年月日</label>
+          <div class="col-md-2"><input type="text" class="form-control" value="1900/01/01"></div>
+          <label for="" class="control-label col-md-1">結婚記念日</label>
+          <div class="col-md-2"><input type="text" class="form-control" value="1900/01/01"></div>
+        </div>
+
+      </form>
+      <!-- 連絡先 End -->
+
+      <!-- ＶＩＳＡ Start -->
+      <div class="row">
+        <div class="col-md-12" style="padding-top:65px;">
+          <h4 class="bg-primary" style="position:absolute;top:0px;width:98%;text-align:center;">ＶＩＳＡ</h4>
+          <div style="overflow:auto;height:150px;">
+            <table class="table">
+              <colgroup style="width:30px;"></colgroup>
+              <colgroup style="width:100px;"></colgroup>
+              <colgroup style="width:70px;"></colgroup>
+              <colgroup style="width:60px;"></colgroup>
+              <colgroup style="width:160px;"></colgroup>
+              <colgroup style="width:160px;"></colgroup>
+              <colgroup style="width:150px;"></colgroup>
+              <colgroup style="width:160px;"></colgroup>
+              <colgroup style="width:120px;"></colgroup>
+              <colgroup style="width:120px;"></colgroup>
+              <thead style="position:absolute;top:30px;">
+                <tr>
+                  <th style="width:30px;"></th>
+                  <th style="width:100px;">番号</th>
+                  <th style="width:70px;">国コード</th>
+                  <th style="width:60px;"></th>
+                  <th style="width:160px;">国名(漢字)</th>
+                  <th style="width:160px;">国名(英字)</th>
+                  <th style="width:150px;">種別</th>
+                  <th style="width:160px;">発行地</th>
+                  <th style="width:120px;">発行日</th>
+                  <th style="width:120px;">有効期限</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td><input type="text" class="form-control" value="123456"></td>
+                  <td><input type="text" class="form-control" value="JP"></td>
+                  <td><button class="btn btn-default">...</button></td>
+                  <td><input type="text" class="form-control" value="日本"></td>
+                  <td><input type="text" class="form-control" value="JAPAN"></td>
+                  <td><input type="text" class="form-control" value="OFFICIAL"></td>
+                  <td><input type="text" class="form-control" value="TOKYO"></td>
+                  <td><input type="text" class="form-control" value="1999/99/99"></td>
+                  <td><input type="text" class="form-control" value="1999/99/99"></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td><input type="text" class="form-control" value="123456"></td>
+                  <td><input type="text" class="form-control" value="JP"></td>
+                  <td><button class="btn btn-default">...</button></td>
+                  <td><input type="text" class="form-control" value="日本"></td>
+                  <td><input type="text" class="form-control" value="JAPAN"></td>
+                  <td><input type="text" class="form-control" value="OFFICIAL"></td>
+                  <td><input type="text" class="form-control" value="TOKYO"></td>
+                  <td><input type="text" class="form-control" value="1999/99/99"></td>
+                  <td><input type="text" class="form-control" value="1999/99/99"></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td><input type="text" class="form-control" value="123456"></td>
+                  <td><input type="text" class="form-control" value="JP"></td>
+                  <td><button class="btn btn-default">...</button></td>
+                  <td><input type="text" class="form-control" value="日本"></td>
+                  <td><input type="text" class="form-control" value="JAPAN"></td>
+                  <td><input type="text" class="form-control" value="OFFICIAL"></td>
+                  <td><input type="text" class="form-control" value="TOKYO"></td>
+                  <td><input type="text" class="form-control" value="1999/99/99"></td>
+                  <td><input type="text" class="form-control" value="1999/99/99"></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td><input type="text" class="form-control" value="123456"></td>
+                  <td><input type="text" class="form-control" value="JP"></td>
+                  <td><button class="btn btn-default">...</button></td>
+                  <td><input type="text" class="form-control" value="日本"></td>
+                  <td><input type="text" class="form-control" value="JAPAN"></td>
+                  <td><input type="text" class="form-control" value="OFFICIAL"></td>
+                  <td><input type="text" class="form-control" value="TOKYO"></td>
+                  <td><input type="text" class="form-control" value="1999/99/99"></td>
+                  <td><input type="text" class="form-control" value="1999/99/99"></td>
+                </tr>
+              </tbody>
+            </table>
+
+            <button type="button" class="btn btn-danger btn-sm" style="margin-left:10px;">削除</button>
+            <button type="button" class="btn btn-info btn-sm pull-right" style="margin-right:10px;">行追加</button>
+
+          </div>
+        </div>
+      </div>
+      <!-- VISA End -->
+
+      <!-- グループ情報 Start -->
+      <div class="row">
+        <div class="col-md-6" style="padding-top:65px;">
+          <h4 class="bg-primary" style="position:absolute;top:0px;width:98%;text-align:center;">グループ情報</h4>
+          <div style="overflow:auto;height:150px;">
+            <table class="table">
+              <colgroup style="width:30px;"></colgroup>
+              <colgroup style="width:100px;"></colgroup>
+              <colgroup style="width:60px;"></colgroup>
+              <colgroup style="width:250px;"></colgroup>
+              <colgroup style="width:110px;"></colgroup>
+              <thead style="position:absolute;top:30px;">
+                <tr>
+                  <th style="width:30px;"></th>
+                  <th style="width:100px;">コード</th>
+                  <th style="width:60px;"></th>
+                  <th style="width:250px;">名称</th>
+                  <th style="width:110px;">筆頭者</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>
+                    <input type="text" class="form-control form-sm" value="TENNIS">
+                  </td>
+                  <td><button class="btn btn-default">...</button></td>
+                  <td><input type="text" class="form-control form-sm" value="テニス"></td>
+                  <td>
+                    <select name="" id="" class="form-control">
+                      <option value=""></option>
+                      <option value="" selected>筆頭</option>
+                      <option value="">その他</option>
+                    </select>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <button type="button" class="btn btn-danger btn-sm" style="margin-left:10px;">削除</button>
+            <button type="button" class="btn btn-info btn-sm pull-right" style="margin-right:10px;">行追加</button>
+          </div>
+        </div>
+        <!-- グループ情報 End -->
+
+        <!-- カード情報 Start -->
+        <div class="col-md-6" style="padding-top:65px;">
+          <h4 class="bg-primary" style="position:absolute;top:0px;width:98%;text-align:center;">カード情報</h4>
+          <div style="overflow:auto;height:150px;">
+            <table class="table">
+              <colgroup style="width:30px;"></colgroup>
+              <colgroup style="width:150px;"></colgroup>
+              <colgroup style="width:150px;"></colgroup>
+              <colgroup style="width:150px;"></colgroup>
+              <thead style="position:absolute;top:30px;">
+                <tr>
+                  <th style="width:30px;"></th>
+                  <th style="width:150px;">カード番号</th>
+                  <th style="width:150px;">カード会社</th>
+                  <th style="width:150px;">有効期限</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>
+                    <input type="text" class="form-control form-sm" value="">
+                  </td>
+                  <td>
+                    <select name="" id="" class="form-control">
+                      <option value=""></option>
+                      <option value="">VISA</option>
+                      <option value="">MASTER</option>
+                    </select>
+                  </td>
+                  <td>
+                    <input type="text" class="form-control form-sm" value="">
+                  </td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+
+            <button type="button" class="btn btn-danger btn-sm" style="margin-left:10px;">削除</button>
+            <button type="button" class="btn btn-info btn-sm pull-right" style="margin-right:10px;">行追加</button>
+          </div>
+        </div>
+
+      </div>
+      <!-- カード情報 End -->
+
+      <!-- 趣味 Start -->
+      <div class="row">
+        <div class="col-md-6" style="padding-top:65px;">
+          <h4 class="bg-primary" style="position:absolute;top:0px;width:98%;text-align:center;">趣味</h4>
+          <div style="overflow:auto;height:150px;">
+            <table class="table">
+              <colgroup style="width:30px;"></colgroup>
+              <colgroup style="width:100px;"></colgroup>
+              <colgroup style="width:60px;"></colgroup>
+              <colgroup style="width:180px;"></colgroup>
+              <colgroup style="width:180px;"></colgroup>
+              <thead style="position:absolute;top:30px;">
+                <tr>
+                  <th style="width:30px;"></th>
+                  <th style="width:100px;">コード</th>
+                  <th style="width:60px;"></th>
+                  <th style="width:180px;">漢字</th>
+                  <th style="width:180px;">英字</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>
+                    <input type="text" class="form-control form-sm" value="001">
+                  </td>
+                  <td><button class="btn btn-default">...</button></td>
+                  <td><input type="text" class="form-control form-sm" value="テニス"></td>
+                  <td><input type="text" class="form-control form-sm" value="TENNIS"></td>
+                </tr>
+              </tbody>
+            </table>
+
+            <button type="button" class="btn btn-danger btn-sm" style="margin-left:10px;">削除</button>
+            <button type="button" class="btn btn-info btn-sm pull-right" style="margin-right:10px;">行追加</button>
+          </div>
+        </div>
+        <!-- 趣味 End -->
+
+        <!-- パーソナル情報 Start -->
+        <div class="col-md-6" style="padding-top:65px;">
+          <h4 class="bg-primary" style="position:absolute;top:0px;width:98%;text-align:center;">パーソナル情報</h4>
+          <div style="overflow:auto;height:150px;">
+            <table class="table">
+              <colgroup style="width:30px;"></colgroup>
+              <colgroup style="width:130px;"></colgroup>
+              <colgroup style="width:80px;"></colgroup>
+              <colgroup style="width:60px;"></colgroup>
+              <colgroup style="width:120px;"></colgroup>
+              <colgroup style="width:150px;"></colgroup>
+              <thead style="position:absolute;top:30px;">
+                <tr>
+                  <th style="width:30px;"></th>
+                  <th style="width:130px;">種別</th>
+                  <th style="width:80px;">コード</th>
+                  <th style="width:60px;"></th>
+                  <th style="width:120px;">漢字</th>
+                  <th style="width:150px;">英字</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>
+                    <select name="" id="" class="form-control">
+                      <option value=""></option>
+                      <option value="" selected>肌の色</option>
+                      <option value="">髪の色</option>
+                      <option value="">目の色</option>
+                      <option value="">宗教</option>
+                      <option value="">血液型</option>
+                      <option value="">身長</option>
+                      <option value="">喫煙</option>
+                    </select>
+                  </td>
+                  <td>
+                    <input type="text" class="form-control form-sm" value="03">
+                  </td>
+                  <td><button class="btn btn-default">...</button></td>
+                  <td><input type="text" class="form-control form-sm" value="肌色"></td>
+                  <td><input type="text" class="form-control form-sm" value="MEDIUM"></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>
+                    <select name="" id="" class="form-control">
+                      <option value=""></option>
+                      <option value="">肌の色</option>
+                      <option value="">髪の色</option>
+                      <option value="">目の色</option>
+                      <option value="">宗教</option>
+                      <option value="">血液型</option>
+                      <option value="" selected>身長</option>
+                      <option value="">喫煙</option>
+                    </select>
+                  </td>
+                  <td>
+                    <input type="text" class="form-control form-sm" value="" disabled>
+                  </td>
+                  <td><button class="btn btn-default" disabled>...</button></td>
+                  <td><input type="text" class="form-control form-sm" value="177"></td>
+                  <td><input type="text" class="form-control form-sm" value="177"></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+
+            <button type="button" class="btn btn-danger btn-sm" style="margin-left:10px;">削除</button>
+            <button type="button" class="btn btn-info btn-sm pull-right" style="margin-right:10px;">行追加</button>
+          </div>
+        </div>
+
+      </div>
+      <!-- カード情報 End -->
+
+      <!-- 備考 Start -->
+      <h4 class="text-center bg-primary">備考</h4>
+      <form class="form-horizontal slim-padding" role="form">
+        <div class="form-group">
+          <label for="" class="control-label col-md-1">備考</label>
+          <div class="col-md-11"><textarea name="" id="" rows="5" class="form-control"></textarea></div>
+        </div>
+      </form>
+      <!-- 備考 End -->
+
+      <div style="width:100px;margin-left:auto;">
+        <button class="btn btn-primary btn-sm">登録</button>
+        <button class="btn btn-danger btn-sm">削除</button>
+      </div>
+      
+
+    </div> <!-- /container -->
+
+    <!-- Footer -->
+    <div class="footer">Footer</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- おまかせくん共通 -->
+    <script src="../js/omakase.js" type="text/javascript" charset="utf-8" ></script>
+  </body>
+</html>

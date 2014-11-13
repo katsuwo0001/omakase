@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>おまかせくん 予約カルテ　AIR</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <!-- holder.js -->
+    <script src="../js/holder.js"></script>
+    <!-- Original CSS -->
+    <link href="../css/omakase.css" rel="stylesheet">
+
+  </head>   
+  <body>
+    <!-- ヘッダー項目 -->
+    <div class="header">
+      <h1>おまかせくん</h1>
+    </div>
+
+    <!-- ナビゲーションバー -->
+    <nav class="navbar navbar-inverse" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <!-- 画面幅が短い時に表示される開閉ボタン -->
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-home"></span></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">予約管理<span class="caret"></span></a></li>
+            <li class="active"><a href="#">手配管理<span class="caret"></span></a></li>
+            <li class="active"><a href="#">経営分析<span class="caret"></span></a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- / container-fluid -->
+    </nav>
+
+    <ul class="breadcrumb">
+        <li><a href="#">予約管理</a><span class="divider"></span></li>
+        <li>カルテ情報</li>
+    </ul>
+
+    <!-- BODY -->
+    <div class="container">
+
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <ul class="list-inline">
+            <li><strong>ステータス：</strong><span class="text-warning">手配中</span></li>
+            <li><strong>予約コード：</strong>AB12345</li>
+            <li><strong>出発日：</strong>2013/04/30</li>
+            <li><strong>帰着日：</strong>2013/05/10</li>
+            <li><strong>期間：</strong>999</li>
+            <li><strong>担当：</strong>今井</li>
+            <li><strong>作成日：</strong>2013/03/01</li>
+            <li><strong>更新日：</strong>2013/03/01</li>
+            <li><strong>案件名：</strong>松田様　ファミリーシンガポール5日間</li>
+            <li><strong>代表者：</strong>松田健太郎</li>
+            <li><strong>連絡先：</strong>090-9999-9999（個人携帯）</li>
+            <li><strong>旅行種別：</strong>AIR&amp;HTL（家族旅行）</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 登録Tab Start -->
+      <div class="row">
+        <div class="col-md-10">
+          <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="entry-tab">
+              <a href="#basic-entry" role="tab" data-toggle="tab">基本情報</a>
+            </li>
+            <li role="presentation" class="entry-tab">
+              <a href="#pax-entry" role="tab" data-toggle="tab">PAX</a>
+            </li>
+            <li role="presentation" class="entry-tab">
+              <a href="#tour-entry" role="tab" data-toggle="tab">TOUR</a>
+            </li>
+            <li role="presentation" class="entry-tab">
+              <a href="#air-entry" role="tab" data-toggle="tab">AIR</a>
+            </li>
+            <li role="presentation" class="entry-tab">
+              <a href="#trns-entry" role="tab" data-toggle="tab">TRNS</a>
+            </li>
+            <li role="presentation" class="entry-tab">
+              <a href="#htl-entry" role="tab" data-toggle="tab">HTL</a>
+            </li>
+            <li role="presentation" class="entry-tab">
+              <a href="#land-entry" role="tab" data-toggle="tab">LAND</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <button id="entry-display" class="btn btn-link" style="width:100px;margin-left:auto;display:block;">▼表示</button>
+        </div>
+      </div>
+
+      <div class="tab-content" id="entry-tab-cotent" style="display:none;margin-bottom:30px;">
+
+        <!-- PAX登録部 Start -->
+        <div role="tabpanel" class="tab-pane" id="pax-entry" style="border:solid 1px silver;padding:10px;">
+          <div class="row">
+            <div class="form-group col-md-1 col-sm-2">
+              <label for="">代表者</label>
+              <select style="height:30px;">
+                <option value=""></option>
+                <option value="代表者">代表者</option>
+              </select>
+            </div>
+            <div class="form-group col-md-2 col-sm-4">
+              <label for="">氏名</label>
+              <input type="text" class="form-control form-sm">
+            </div>
+            <div class="form-group col-md-2 col-sm-4">
+              <label for="">氏名(英字)</label>
+              <input type="text" class="form-control form-sm">
+            </div>
+            <div class="form-group col-md-1 col-sm-1">
+              <label for="">性別</label>
+              <select style="height:30px;">
+                <option value="男">男</option>
+                <option value="女">女</option>
+              </select>
+            </div>
+            <div class="form-group col-md-1 col-sm-1">
+              <label for="">年齢</label>
+              <input type="text" class="form-control form-sm">
+            </div>
+            <div class="form-group col-md-2 col-sm-3">
+              <label for="">お客様番号</label><br>
+              M58768
+            </div>
+          </div>
+
+          <div style="margin-left:auto;display:block;width:135px;">
+            <button type="button" class="btn btn-primary btn-sm" style="width:80px;">PAX検索</button>
+            <button type="button" class="btn btn-primary btn-sm" style="width:50px;">登録</button>
+          </div>
+
+        </div>
+        <!-- PAX登録部 End -->
+
+        <!-- AIR登録部 Start -->
+        <div role="tabpanel" class="tab-pane" id="air-entry" style="border:solid 1px silver;padding:10px;">
+          
+          <div class="row">
+            <div class="col-md-1 col-sm-2">
+              <label for="">INP</label>
+              <input type="text" class="form-control input-sm">
+            </div>
+            <div class="col-md-2 col-sm-3">
+              <label for="">予約No</label>
+              <input type="text" class="form-control input-sm">
+            </div>
+            <div class="col-md-2 col-sm-3">
+              <label for="">便名</label>
+              <input type="text" class="form-control input-sm">
+            </div>
+            <div class="col-md-1 col-sm-2">
+              <label for="">C</label>
+              <input type="text" class="form-control input-sm">
+            </div>
+            <div class="col-md-2 col-sm-3">
+              <label for="">搭乗日</label>
+              <input type="date" class="form-control input-sm">
+            </div>
+            <div class="col-md-1 col-sm-2">
+              <label for="">出発地</label>
+              <input type="text" class="form-control input-sm">
+            </div>
+            <div class="col-md-1 col-sm-2">
+              <label for="">到着地</label>
+              <input type="text" class="form-control input-sm">
+            </div>
+            <div class="col-md-1 col-sm-2">
+              <label for="">出発時</label>
+              <input type="text" class="form-control input-sm">
+            </div>
+            <div class="col-md-1 col-sm-2">
+              <label for="">到着時</label>
+              <input type="text" class="form-control input-sm">
+            </div>
+            <div class="col-md-2 col-sm-3">
+              <label for="">到着日</label>
+              <input type="date" class="form-control input-sm">
+            </div>
+            <div class="col-md-1 col-sm-2">
+              <label for="">ST</label><br>
+              <select style="height:30px;">
+                <option value="" selected></option>
+                <option value="HK">HK</option>
+              </select>
+            </div>
+            <div class="col-md-1 col-sm-2">
+              <label for="">数</label>
+              <input type="number" class="form-control input-sm">
+            </div>
+            <div class="col-md-2 col-sm-3">
+              <label for="">発券期限</label>
+              <input type="date" class="form-control input-sm">
+            </div>
+            <div class="col-md-2 col-sm-3">
+              <label for="">発券日</label>
+              <input type="date" class="form-control input-sm">
+            </div>
+            <div class="col-md-1 col-sm-2">
+              <label for="">旅客</label>
+              <input type="text" class="form-control input-sm">
+            </div>
+          </div>
+
+          <div style="margin-left:auto;display:block;width:55px;">
+            <button type="button" class="btn btn-primary btn-sm" style="width:50px;">登録</button>
+          </div>
+
+        </div>
+        <!-- AIR登録部 End -->
+
+        <!-- TRNS登録部 Start -->
+        <div role="tabpanel" class="tab-pane" id="trns-entry" style="border-left:solid 1px silver;border-bottom:solid 1px silver;border-right:solid 1px silver;border-top:solid 1px silver;padding:10px;">
+          <div class="row">
+            <div class="form-group col-md-1 col-sm-1">
+              <label>INP</label>
+              <input type="text" class="form-control input-sm" value="">
+            </div>
+            <div class="form-group col-md-1 col-sm-2">
+              <label>予約番号</label>
+              <input type="text" class="form-control input-sm" value="">
+            </div>
+            <div class="form-group col-md-1 col-sm-1">
+              <label>種別</label><br>
+              <select style="height:30px;">
+                <option value=""></option>
+                <option value="JR">JR</option>
+              </select>
+            </div>
+            <div class="form-group col-md-2 col-sm-4">
+              <label>名称</label>
+              <input type="text" class="form-control input-sm" value="">
+            </div>
+            <div class="form-group col-md-2 col-sm-2">
+              <label>等級</label><br>
+              <select style="height:30px;">
+                <option value=""></option>
+                <option value="普通">普通</option>
+              </select>
+            </div>
+            <div class="form-group col-md-2 col-sm-4">
+              <label>出発日</label>
+              <input type="text" class="form-control input-sm" value="">
+            </div>
+            <div class="form-group col-md-2 col-sm-4">
+              <label>出発地</label>
+              <input type="text" class="form-control input-sm" value="">
+            </div>
+            <div class="form-group col-md-1 col-sm-2">
+              <label>出発時</label>
+              <input type="text" class="form-control input-sm" value="">
+            </div>
+            <div class="form-group col-md-2 col-sm-4">
+              <label>到着地</label>
+              <input type="text" class="form-control input-sm" value="">
+            </div>
+            <div class="form-group col-md-1 col-sm-1">
+              <label>到着時</label>
+              <input type="text" class="form-control input-sm" value="">
+            </div>
+            <div class="form-group col-md-1 col-sm-1">
+              <label>ST</label><br>
+              <select style="height:30px;">
+                <option value="HK" selected>HK</option>
+              </select>
+            </div>
+            <div class="form-group col-md-1 col-sm-1">
+              <label>数</label>
+              <input type="text" class="form-control input-sm" value="">
+            </div>
+            <div class="form-group col-md-2 col-sm-4">
+              <label>発券期限</label>
+              <input type="text" class="form-control input-sm" value="">
+            </div>
+            <div class="form-group col-md-1 col-sm-1">
+              <label>発券</label><br>
+              <select style="height:30px;">
+                <option value="未" selected>未</option>
+                <option value="済">済</option>
+              </select>
+            </div>
+            <div class="form-group col-md-1 col-sm-2">
+              <label>対象旅客</label>
+              <input type="text" class="form-control input-sm" value="">
+            </div>
+          </div>
+
+          <div style="margin-left:auto;display:block;width:55px;">
+            <button type="button" class="btn btn-primary btn-sm" style="width:50px;">登録</button>
+          </div>
+
+        </div>
+        <!-- TRNS登録部 End -->
+
+      </div>
+      <!-- 登録Tab End -->
+
+
+      <!-- Pax Start -->
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <span class="panel-title">PAX</span>
+          <span class="pull-right">
+            <span class="glyphicon glyphicon-star">VIP</span>
+            <span class="glyphicon glyphicon-asterisk">リピーター</span>
+            <span class="glyphicon glyphicon-exclamation-sign">要注意</span>
+          </span>
+        </div>
+        <div class="panel-body">
+
+          <div>
+            <ul class="list-inline">
+              <li>
+                <span class="list-border bg-info">1</span>
+                <span class="list-border" style="width:200px;">HAYASHI/YOUICHI:MR/45/M</span>
+                <span class="list-border"><span class="glyphicon glyphicon-star"></span></span>
+                <span class="list-border">　</span>
+                <span class="list-border">　</span>
+              </li>
+              <li>
+                <span class="list-border bg-info">2</span>
+                <span class="list-border" style="width:200px;">HAYASHI/YOUICHI:MR/45/M</span>
+                <span class="list-border">　</span>
+                <span class="list-border">　</span>
+                <span class="list-border">　</span>
+              </li>
+              <li>
+                <span class="list-border bg-info">3</span>
+                <span class="list-border" style="width:200px;">HAYASHI/YOUICHI:MR/45/M</span>
+                <span class="list-border">　</span>
+                <span class="list-border">　</span>
+                <span class="list-border">　</span>
+              </li>
+              <li>
+                <span class="list-border bg-info">4</span>
+                <span class="list-border" style="width:200px;">HAYASHI/YOUICHI:MR/45/M</span>
+                <span class="list-border">　</span></span>
+                <span class="list-border">　</span>
+                <span class="list-border">　</span>
+              </li>
+              <li>
+                <span class="list-border bg-info">5</span>
+                <span class="list-border" style="width:200px;">HAYASHI/YOUICHI:MR/45/M</span>
+                <span class="list-border">　</span>
+                <span class="list-border">　</span>
+                <span class="list-border">　</span>
+              </li>
+              <li>
+                <span class="list-border bg-info">6</span>
+                <span class="list-border" style="width:200px;">HAYASHI/YOUICHI:MR/45/M</span>
+                <span class="list-border">　</span>
+                <span class="list-border">　</span>
+                <span class="list-border">　</span>
+              </li>
+              <li>
+                <span class="list-border bg-info">7</span>
+                <span class="list-border" style="width:200px;">HAYASHI/YOUICHI:MR/45/M</span>
+                <span class="list-border">　</span>
+                <span class="list-border"><span class="glyphicon glyphicon-asterisk"></span></span>
+                <span class="list-border"><span class="glyphicon glyphicon-exclamation-sign"></span></span>
+              </li>
+              <li>
+                <span class="list-border bg-info">8</span>
+                <span class="list-border" style="width:200px;">HAYASHI/YOUICHI:MR/45/M</span>
+                <span class="list-border">　</span>
+                <span class="list-border">　</span>
+                <span class="list-border">　</span>
+              </li>
+              <li>
+                <span class="list-border bg-info">9</span>
+                <span class="list-border" style="width:200px;">HAYASHI/YOUICHI:MR/45/M</span>
+                <span class="list-border">　</span>
+                <span class="list-border">　</span>
+                <span class="list-border">　</span>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <ul class="list-inline" style="display:inline;float:right;">
+              <li><strong>計12人</strong></li>
+              <li><a href="#"><span class="caret"></span>すべて表示</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+      <!-- Pax End -->
+
+      <!-- TOUR Start -->
+      <div class="panel panel-primary">
+        <div class="panel-heading"><div class="panel-title">TOUR</div></div>
+        <div class="panel-body">
+
+          <table class="table" style="min-width:800px;">
+            <thead>
+              <tr>
+                <th></th>
+                <th>No</th>
+                <th>INP</th>
+                <th>予約</th>
+                <th>コース名</th>
+                <th>コースNo</th>
+                <th>出発日</th>
+                <th>出発地</th>
+                <th>方面</th>
+                <th>都市</th>
+                <th>ST</th>
+                <th>数</th>
+                <th>旅客</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="checkbox"></td>
+                <td>1</td>
+                <td style="width:50px;"><input type="text" class="form-control input-sm" value="T"></td>
+                <td><input type="text" class="form-control input-sm" value="33RVSP"></td>
+                <td><input type="text" class="form-control input-sm" value="マリーナベイサンズに泊まるシンガポール5日間"></td>
+                <td><input type="text" class="form-control input-sm" value="JA1205"></td>
+                <td><input type="text" class="form-control input-sm" value="2012/01/11(水)"></td>
+                <td style="width:70px;"><input type="text" class="form-control input-sm" value="NRT"></td>
+                <td>
+                  <select style="height:30px;">
+                    <option value="アジア" selected>アジア</option>
+                    <option value="アメリカ">アメリカ</option>
+                    <option value="ヨーロッパ">ヨーロッパ</option>
+                  </select>
+                </td>
+                <td style="width:70px;"><input type="text" class="form-control input-sm" value="SIN"></td>
+                <td>
+                  <select style="height:30px;">
+                    <option value="HK" selected>HK</option>
+                  </select>
+                </td>
+                <td style="width:70px;"><input type="text" class="form-control input-sm" value="999"></td>
+                <td style="width:70px;"><input type="text" class="form-control input-sm" value="1-11"></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox"></td>
+                <td>2</td>
+                <td><input type="text" class="form-control input-sm" value="T"></td>
+                <td><input type="text" class="form-control input-sm" value="33RVSP"></td>
+                <td><input type="text" class="form-control input-sm" value="マリーナベイサンズに泊まるシンガポール5日間"></td>
+                <td><input type="text" class="form-control input-sm" value="JA1205"></td>
+                <td><input type="text" class="form-control input-sm" value="2012/01/11(水)"></td>
+                <td><input type="text" class="form-control input-sm" value="NRT"></td>
+                <td>
+                  <select style="height:30px;">
+                    <option value="アジア" selected>アジア</option>
+                    <option value="アメリカ">アメリカ</option>
+                    <option value="ヨーロッパ">ヨーロッパ</option>
+                  </select>
+                </td>
+                <td><input type="text" class="form-control input-sm" value="SIN"></td>
+                <td>
+                  <select style="height:30px;">
+                    <option value="HK" selected>HK</option>
+                  </select>
+                </td>
+                <td><input type="text" class="form-control input-sm" value="999"></td>
+                <td><input type="text" class="form-control input-sm" value="12"></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="row">
+            <div class="col-md-6">
+              <button type="button" class="btn btn-danger btn-sm" style="widht:50px;">削除</button>
+            </div>
+            <div class="col-md-6">
+              <div style="width:155px;margin-left:auto;">
+                <button type="button" class="btn btn-primary btn-sm" style="width:50px;">更新</button>
+                <button type="button" class="btn btn-danger btn-sm" style="widht:90px;">ALLキャンセル</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!-- TOUR Start -->
+
+      <!-- 旅程 Start -->
+      <div class="panel panel-primary">
+        <div class="panel-heading"><div class="panel-title">旅程情報</div></div>
+        <div class="panel-body">
+
+          <div class="row">
+            <div class="col-md-3">
+              <label><input id="air-display" type="checkbox" checked>AIR</label>
+              <label><input id="trns-display" type="checkbox" checked>TRNS</label>
+              <label><input id="htl-display" type="checkbox" checked>HTL</label>
+              <label><input id="land-display" type="checkbox" checked>LAND</label>
+            </div>
+            <div class="col-md-2">
+              <label><input id="detail-display" type="checkbox">詳細表示</label>
+            </div>
+          </div>
+
+          <table class="table">
+            <thead>
+              <tr>
+                <th>DAY</th>
+                <th>日付</th>
+                <th>時間</th>
+                <th>種別</th>
+                <th>ご予定</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="collapse in itinerary-trns" onclick="detailClose('detail1');" style="cursor: pointer;">
+                <td>1</td>
+                <td>2012/07/20</td>
+                <td>07:18</td>
+                <td>TRNS</td>
+                <td>成田エクスプレス9号　普通車　品川07:18発　成田空港第208:33着</td>
+              </tr>
+              <tr id="detail1" class="active collapse itinerary-trns-detail">
+                <td colspan="5" style="padding-left:50px;">
+                  <div class="row">
+                    <div class="form-group col-md-1 col-sm-2">
+                      <label>INP</label>
+                      <input type="text" class="form-control input-sm" value="W">
+                    </div>
+                    <div class="form-group col-md-1 col-sm-2">
+                      <label>予約番号</label>
+                      <input type="text" class="form-control input-sm" value="33RVSP">
+                    </div>
+                    <div class="form-group col-md-1 col-sm-2">
+                      <label>種別</label><br>
+                      <select style="height:30px;">
+                        <option value="JR" selected>JR</option>
+                      </select>
+                    </div>
+                    <div class="form-group col-md-2 col-sm-2">
+                      <label>名称</label>
+                      <input type="text" class="form-control input-sm" value="成田エクスプレス9号">
+                    </div>
+                    <div class="form-group col-md-2 col-sm-2">
+                      <label>等級</label><br>
+                      <select style="height:30px;">
+                        <option value="普通" selected>普通</option>
+                      </select>
+                    </div>
+                    <div class="form-group col-md-2 col-sm-2">
+                      <label>出発日</label>
+                      <input type="text" class="form-control input-sm" value="2012/01/11（水）">
+                    </div>
+                    <div class="form-group col-md-2 col-sm-2">
+                      <label>出発地</label>
+                      <input type="text" class="form-control input-sm" value="品川">
+                    </div>
+                    <div class="form-group col-md-1 col-sm-2">
+                      <label>出発時</label>
+                      <input type="text" class="form-control input-sm" value="07:18">
+                    </div>
+                    <div class="form-group col-md-2 col-sm-2">
+                      <label>到着地</label>
+                      <input type="text" class="form-control input-sm" value="成田空港第2">
+                    </div>
+                    <div class="form-group col-md-1 col-sm-2">
+                      <label>到着時</label>
+                      <input type="text" class="form-control input-sm" value="08:33">
+                    </div>
+                    <div class="form-group col-md-1 col-sm-2">
+                      <label>ST</label><br>
+                      <select style="height:30px;">
+                        <option value="HK" selected>HK</option>
+                      </select>
+                    </div>
+                    <div class="form-group col-md-1 col-sm-2">
+                      <label>数</label>
+                      <input type="text" class="form-control input-sm" value="11">
+                    </div>
+                    <div class="form-group col-md-2 col-sm-2">
+                      <label>発券期限</label>
+                      <input type="text" class="form-control input-sm" value="2012/01/30（月）">
+                    </div>
+                    <div class="form-group col-md-1 col-sm-2">
+                      <label>発券</label><br>
+                      <select style="height:30px;">
+                        <option value="未" selected>未</option>
+                        <option value="済">済</option>
+                      </select>
+                    </div>
+                    <div class="form-group col-md-1 col-sm-2">
+                      <label>旅客</label>
+                      <input type="text" class="form-control input-sm" value="1-11">
+                    </div>
+                  </div>
+
+                  <div style="width:100px;margin-left:auto;">
+                    <button type="button" class="btn btn-primary btn-sm" style="width:50px;">更新</button>
+                    <button type="button" class="btn btn-danger btn-sm" style="widht:50px;">削除</button>
+                  </div>
+
+                </td>
+              </tr>
+              <tr class="collapse in itinerary-air" onclick="detailClose('detail2');" style="cursor: pointer;">
+                <td>1</td>
+                <td>2012/07/20</td>
+                <td>10:15</td>
+                <td>AIR</td>
+                <td>日本航空719便　エコノミークラス　成田10:15発　シンガポール</td>
+              </tr>
+              <tr id="detail2" class="active collapse itinerary-air-detail">
+                <td colspan="5" style="padding-left:50px;">
+                  <!--
+                  <ul class="list-inline">
+                    <li><strong>INP：</strong>G</li>
+                    <li><strong>予約番号：</strong>AB12345</li>
+                    <li><strong>便名：</strong>JL0719</li>
+                    <li><strong>C：</strong>Y</li>
+                    <li><strong>搭乗日：</strong>2013/04/30(月)</li>
+                    <li><strong>出発地：</strong>NRT</li>
+                    <li><strong>到着地：</strong>SIN</li>
+                    <li><strong>出発：</strong>10:15</li>
+                    <li><strong>到着：</strong>17:45</li>
+                    <li><strong>到着日：</strong>2013/04/30(月)</li>
+                    <li><strong>ST：</strong>HK</li>
+                    <li><strong>数：</strong>999</li>
+                    <li><strong>発券期限：</strong>2013/04/30(月)</li>
+                    <li><strong>発券日：</strong>2013/04/30(月)</li>
+                    <li><strong>対象：</strong>1-11</li>
+                  </ul>
+                  -->
+<!--                   <div>
+                    <div class="row">
+                      <div class="col-md-1 col-sm-1"><strong>INP</strong><br>G</div>
+                      <div class="col-md-1 col-sm-2"><strong>予約番号</strong><br>JL0719</div>
+                      <div class="col-md-1 col-sm-2"><strong>便名</strong><br>JL0719</div>
+                      <div class="col-md-1 col-sm-1"><strong>C</strong><br>Y</div>
+                      <div class="col-md-2 col-sm-2"><strong>搭乗日</strong><br>2012/07/20(月)</div>
+                      <div class="col-md-1 col-sm-2"><strong>出発地</strong><br>NRT</div>
+                      <div class="col-md-1 col-sm-2"><strong>到着地</strong><br>SIN</div>
+                      <div class="col-md-1 col-sm-2"><strong>出発時</strong><br>10:15</div>
+                      <div class="col-md-1 col-sm-2"><strong>到着時</strong><br>17:45</div>
+                      <div class="col-md-2 col-sm-2"><strong>到着日</strong><br>2012/07/20(月)</div>
+                    
+                      <div class="col-md-1 col-sm-1"><strong>ST</strong><br>HK</div>
+                      <div class="col-md-1 col-sm-1"><strong>数</strong><br>999</div>
+                      <div class="col-md-2 col-sm-2"><strong>発券期限</strong><br>2012/04/30(月)</div>
+                      <div class="col-md-2 col-sm-2"><strong>発券日</strong><br>2012/04/30(月)</div>
+                      <div class="col-md-1 col-sm-2"><strong>対象旅客</strong><br>1-11</div>
+                    </div>
+                  </div> -->
+
+                  <div class="row">
+                    <div class="col-md-1 col-sm-2">
+                      <label for="">INP</label>
+                      <input type="text" class="form-control input-sm" value="G">
+                    </div>
+                    <div class="col-md-2 col-sm-3">
+                      <label for="">予約No</label>
+                      <input type="text" class="form-control input-sm" value="XXXXXXX">
+                    </div>
+                    <div class="col-md-2 col-sm-3">
+                      <label for="">便名</label>
+                      <input type="text" class="form-control input-sm" value="JL0719">
+                    </div>
+                    <div class="col-md-1 col-sm-2">
+                      <label for="">C</label>
+                      <input type="text" class="form-control input-sm" value="Y">
+                    </div>
+                    <div class="col-md-2 col-sm-3">
+                      <label for="">搭乗日</label>
+                      <input type="text" class="form-control input-sm" value="2012/07/20(月)">
+                    </div>
+                    <div class="col-md-1 col-sm-2">
+                      <label for="">出発地</label>
+                      <input type="text" class="form-control input-sm" value="NRT">
+                    </div>
+                    <div class="col-md-1 col-sm-2">
+                      <label for="">到着地</label>
+                      <input type="text" class="form-control input-sm" value="SIN">
+                    </div>
+                    <div class="col-md-1 col-sm-2">
+                      <label for="">出発時</label>
+                      <input type="text" class="form-control input-sm" value="10:15">
+                    </div>
+                    <div class="col-md-1 col-sm-2">
+                      <label for="">到着時</label>
+                      <input type="text" class="form-control input-sm" value="17:45">
+                    </div>
+                    <div class="col-md-2 col-sm-3">
+                      <label for="">到着日</label>
+                      <input type="text" class="form-control input-sm" value="2012/07/20(月)">
+                    </div>
+                    <div class="col-md-1 col-sm-2">
+                      <label for="">ST</label><br>
+                      <select style="height:30px;">
+                        <option value=""></option>
+                        <option value="HK" selected>HK</option>
+                      </select>
+                    </div>
+                    <div class="col-md-1 col-sm-2">
+                      <label for="">数</label>
+                      <input type="text" class="form-control input-sm" value="999">
+                    </div>
+                    <div class="col-md-2 col-sm-3">
+                      <label for="">発券期限</label>
+                      <input type="text" class="form-control input-sm" value="2012/04/30(月)">
+                    </div>
+                    <div class="col-md-2 col-sm-3">
+                      <label for="">発券日</label>
+                      <input type="text" class="form-control input-sm" value="2012/04/30(月)">
+                    </div>
+                    <div class="col-md-1 col-sm-2">
+                      <label for="">旅客</label>
+                      <input type="text" class="form-control input-sm" value="1-11">
+                    </div>
+                  </div>
+                  <div style="width:100px;margin-left:auto;">
+                    <button type="button" class="btn btn-primary btn-sm" style="width:50px;">更新</button>
+                    <button type="button" class="btn btn-danger btn-sm" style="widht:50px;">削除</button>
+                  </div>
+                </td>
+              </tr>
+              <tr class="collapse in itinerary-air" onclick="detailClose('detail3');" style="cursor: pointer;">
+                <td>5</td>
+                <td>2012/07/24</td>
+                <td>08:20</td>
+                <td>AIR</td>
+                <td>日本航空712便　エコノミークラス　シンガポール08:20発　成田16:10着</td>
+              </tr>
+              <tr id="detail3" class="active collapse itinerary-air-detail">
+                <td colspan="5" style="padding-left:50px;">
+                  <div class="row">
+                    <div class="col-md-1 col-sm-2">
+                      <label for="">INP</label>
+                      <input type="text" class="form-control input-sm" value="G">
+                    </div>
+                    <div class="col-md-2 col-sm-3">
+                      <label for="">予約No</label>
+                      <input type="text" class="form-control input-sm" value="XXXXXXX">
+                    </div>
+                    <div class="col-md-2 col-sm-3">
+                      <label for="">便名</label>
+                      <input type="text" class="form-control input-sm" value="JL0719">
+                    </div>
+                    <div class="col-md-1 col-sm-2">
+                      <label for="">C</label>
+                      <input type="text" class="form-control input-sm" value="Y">
+                    </div>
+                    <div class="col-md-2 col-sm-3">
+                      <label for="">搭乗日</label>
+                      <input type="text" class="form-control input-sm" value="2012/07/20(月)">
+                    </div>
+                    <div class="col-md-1 col-sm-2">
+                      <label for="">出発地</label>
+                      <input type="text" class="form-control input-sm" value="NRT">
+                    </div>
+                    <div class="col-md-1 col-sm-2">
+                      <label for="">到着地</label>
+                      <input type="text" class="form-control input-sm" value="SIN">
+                    </div>
+                    <div class="col-md-1 col-sm-2">
+                      <label for="">出発時</label>
+                      <input type="text" class="form-control input-sm" value="10:15">
+                    </div>
+                    <div class="col-md-1 col-sm-2">
+                      <label for="">到着時</label>
+                      <input type="text" class="form-control input-sm" value="17:45">
+                    </div>
+                    <div class="col-md-2 col-sm-3">
+                      <label for="">到着日</label>
+                      <input type="text" class="form-control input-sm" value="2012/07/20(月)">
+                    </div>
+                    <div class="col-md-1 col-sm-2">
+                      <label for="">ST</label><br>
+                      <select style="height:30px;">
+                        <option value=""></option>
+                        <option value="HK" selected>HK</option>
+                      </select>
+                    </div>
+                    <div class="col-md-1 col-sm-2">
+                      <label for="">数</label>
+                      <input type="text" class="form-control input-sm" value="999">
+                    </div>
+                    <div class="col-md-2 col-sm-3">
+                      <label for="">発券期限</label>
+                      <input type="text" class="form-control input-sm" value="2012/04/30(月)">
+                    </div>
+                    <div class="col-md-2 col-sm-3">
+                      <label for="">発券日</label>
+                      <input type="text" class="form-control input-sm" value="2012/04/30(月)">
+                    </div>
+                    <div class="col-md-1 col-sm-2">
+                      <label for="">旅客</label>
+                      <input type="text" class="form-control input-sm" value="1-11">
+                    </div>
+                  </div>
+                  <div style="width:100px;margin-left:auto;">
+                    <button type="button" class="btn btn-primary btn-sm" style="width:50px;">更新</button>
+                    <button type="button" class="btn btn-danger btn-sm" style="widht:50px;">削除</button>
+                  </div>
+                </td>
+              </tr>
+              <tr class="collapse in itinerary-trns" onclick="detailClose('detail4');" style="cursor: pointer;">
+                <td>5</td>
+                <td>2012/07/24</td>
+                <td>19:49</td>
+                <td>TRNS</td>
+                <td>成田エクスプレス50号　普通車　成田空港第219:49発　品川20:50着</td>
+              </tr>
+              <tr id="detail4" class="active collapse itinerary-trns-detail">
+                <td colspan="5" style="padding-left:50px;">
+                  <div class="row">
+                    <div class="form-group col-md-1 col-sm-2">
+                      <label>INP</label>
+                      <input type="text" class="form-control input-sm" value="W">
+                    </div>
+                    <div class="form-group col-md-1 col-sm-2">
+                      <label>予約番号</label>
+                      <input type="text" class="form-control input-sm" value="33RVSP">
+                    </div>
+                    <div class="form-group col-md-1 col-sm-2">
+                      <label>種別</label><br>
+                      <select style="height:30px;">
+                        <option value="JR" selected>JR</option>
+                      </select>
+                    </div>
+                    <div class="form-group col-md-2 col-sm-2">
+                      <label>名称</label>
+                      <input type="text" class="form-control input-sm" value="成田エクスプレス50号">
+                    </div>
+                    <div class="form-group col-md-2 col-sm-2">
+                      <label>等級</label><br>
+                      <select style="height:30px;">
+                        <option value="普通" selected>普通</option>
+                      </select>
+                    </div>
+                    <div class="form-group col-md-2 col-sm-2">
+                      <label>出発日</label>
+                      <input type="text" class="form-control input-sm" value="2012/07/24（水）">
+                    </div>
+                    <div class="form-group col-md-2 col-sm-2">
+                      <label>出発地</label>
+                      <input type="text" class="form-control input-sm" value="成田空港第2">
+                    </div>
+                    <div class="form-group col-md-1 col-sm-2">
+                      <label>出発時</label>
+                      <input type="text" class="form-control input-sm" value="19:49">
+                    </div>
+                    <div class="form-group col-md-2 col-sm-2">
+                      <label>到着地</label>
+                      <input type="text" class="form-control input-sm" value="品川">
+                    </div>
+                    <div class="form-group col-md-1 col-sm-2">
+                      <label>到着時</label>
+                      <input type="text" class="form-control input-sm" value="20:05">
+                    </div>
+                    <div class="form-group col-md-1 col-sm-2">
+                      <label>ST</label><br>
+                      <select style="height:30px;">
+                        <option value="HK" selected>HK</option>
+                      </select>
+                    </div>
+                    <div class="form-group col-md-1 col-sm-2">
+                      <label>数</label>
+                      <input type="text" class="form-control input-sm" value="11">
+                    </div>
+                    <div class="form-group col-md-2 col-sm-2">
+                      <label>発券期限</label>
+                      <input type="text" class="form-control input-sm" value="2012/07/30（月）">
+                    </div>
+                    <div class="form-group col-md-1 col-sm-2">
+                      <label>発券</label><br>
+                      <select style="height:30px;">
+                        <option value="未" selected>未</option>
+                        <option value="済">済</option>
+                      </select>
+                    </div>
+                    <div class="form-group col-md-1 col-sm-2">
+                      <label>旅客</label>
+                      <input type="text" class="form-control input-sm" value="1-11">
+                    </div>
+                  </div>
+                  <div style="width:100px;margin-left:auto;">
+                    <button type="button" class="btn btn-primary btn-sm" style="width:50px;">更新</button>
+                    <button type="button" class="btn btn-danger btn-sm" style="widht:50px;">削除</button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+
+          </table>
+
+        </div>
+      </div>
+      <!-- 旅程 End -->
+
+      <div class="row">
+
+        <!-- 社内連絡 Start -->
+        <div class="col-md-6">
+
+          <div style="text-align:center">
+            <h5 style="display:inline">
+              お問い合わせ・社内連絡
+            </h5>
+            <div style="float:right;">
+              <a href="#"><span class="glyphicon glyphicon-plus"></span>行を追加</a>
+            </div>
+          </div>
+
+          <table class="table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>種別</th>
+                <th>内容</th>
+                <th>期限</th>
+                <th>担当</th>
+                <th>実施</th>
+                <th>担当</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td></td>
+                <td>手配</td>
+                <td>ホテル手配確認</td>
+                <td>04/30</td>
+                <td>今井</td>
+                <td>04/30</td>
+                <td>井上</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>手配</td>
+                <td>ホテルクーポン発行</td>
+                <td>04/30</td>
+                <td>今井</td>
+                <td>04/30</td>
+                <td>井上</td>
+              </tr>
+              <tr>
+                <td><span class="glyphicon glyphicon-warning-sign" style="color:orange"></span></td>
+                <td>手配</td>
+                <td>JTB券発行</td>
+                <td>04/30</td>
+                <td>今井</td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- 社内連絡 End -->
+
+        <!-- ToDo Start -->
+        <div class="col-md-6">
+
+          <div style="text-align:center">
+            <h5 style="display:inline">TODOリスト</h5>
+            <div style="float:right;">
+              <a href="#"><span class="glyphicon glyphicon-plus"></span>行を追加</a>
+            </div>
+          </div>
+
+          <table class="table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>種別</th>
+                <th>内容</th>
+                <th>期限</th>
+                <th>担当</th>
+                <th>実施</th>
+                <th>担当</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td></td>
+                <td>手配</td>
+                <td>ホテル手配確認</td>
+                <td>04/30</td>
+                <td>今井</td>
+                <td>04/30</td>
+                <td>井上</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>手配</td>
+                <td>ホテルクーポン発行</td>
+                <td>04/30</td>
+                <td>今井</td>
+                <td>04/30</td>
+                <td>井上</td>
+              </tr>
+              <tr>
+                <td><span class="glyphicon glyphicon-warning-sign" style="color:orange"></span></td>
+                <td>手配</td>
+                <td>JTB券発行</td>
+                <td>04/30</td>
+                <td>今井</td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- ToDo End -->
+
+      </div>
+
+    </div> <!-- /container -->
+
+    <!-- Footer -->
+    <div class="footer">Footer</div>
+
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- おまかせくん共通 -->
+    <script src="../js/omakase.js" type="text/javascript" charset="utf-8" ></script>
+  </body>
+</html>

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>おまかせくん お客様カルテ検索</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/cupertino/jquery-ui.min.css" />
+    <!-- Original CSS -->
+    <link href="../css/omakase.css" rel="stylesheet">
+
+  </head>   
+  <body>
+    <!-- ヘッダー項目 -->
+    <div class="header">
+      <h1>おまかせくん</h1>
+    </div>
+
+    <!-- ナビゲーションバー -->
+    <nav class="navbar navbar-inverse" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <!-- 画面幅が短い時に表示される開閉ボタン -->
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-home"></span></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">予約管理<span class="caret"></span></a></li>
+            <li class="active"><a href="#">手配管理<span class="caret"></span></a></li>
+            <li class="active"><a href="#">経営分析<span class="caret"></span></a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- / container-fluid -->
+    </nav>
+
+    <ul class="breadcrumb">
+      <li><a href="#">予約管理</a><span class="divider"></span></li>
+      <li>お客様カルテ検索</li>
+    </ul>
+
+    <!-- BODY -->
+    <div class="container">
+      <!-- 検索条件 Start -->
+      <form class="form-horizontal" role="form">
+        <div class="form-group">
+          <div class="col-md-2 col-sm-4">
+            お名前(漢字) 
+            <label for="" class="control-label" style="float:right">姓</label>
+          </div>
+          <div class="col-md-2 col-sm-4">
+            <input type="text" class="form-control form-sm">
+          </div>
+          <label for="" class="control-label col-md-1 col-sm-1">名</label>
+          <div class="col-md-2 col-sm-4">
+            <input type="text" class="form-control form-sm">
+          </div>
+          <label for="" class="control-label col-md-1 col-sm-1">ミドル</label>
+          <div class="col-md-2 col-sm-4">
+            <input type="text" class="form-control form-sm">
+          </div>
+          <label class="col-md-2 col-sm-4"><input type="checkbox">カルテ内全員から検索</label>
+        </div>
+
+        <div class="form-group">
+          <div class="col-md-2 col-sm-3">
+            お名前(カナ) 
+            <label for="" class="control-label" style="float:right">姓</label>
+          </div>
+          <div class="col-md-2 col-sm-4">
+            <input type="text" class="form-control form-sm">
+          </div>
+          <label for="" class="control-label col-md-1 col-sm-1">名</label>
+          <div class="col-md-2 col-sm-4">
+            <input type="text" class="form-control form-sm">
+          </div>
+          <label for="" class="control-label col-md-1 col-sm-1">ミドル</label>
+          <div class="col-md-2 col-sm-4">
+            <input type="text" class="form-control form-sm">
+          </div>
+          <label class="col-md-2 col-sm-4"><input type="checkbox">カルテ内全員から検索</label>
+        </div>
+
+        <div class="form-group">
+          <div class="col-md-2 col-sm-4">
+            お名前(英字) 
+            <label for="" class="control-label" style="float:right">姓</label>
+          </div>
+          <div class="col-md-2 col-sm-4">
+            <input type="text" class="form-control form-sm">
+          </div>
+          <label for="" class="control-label col-md-1 col-sm-1">名</label>
+          <div class="col-md-2 col-sm-4">
+            <input type="text" class="form-control form-sm">
+          </div>
+          <label for="" class="control-label col-md-1 col-sm-1">ミドル</label>
+          <div class="col-md-2 col-sm-4">
+            <input type="text" class="form-control form-sm">
+          </div>
+          <label class="col-md-2 col-sm-4"><input type="checkbox">カルテ内全員から検索</label>
+        </div>
+
+        <div class="form-group">
+          <label for="" class="col-md-2">電話番号</label>
+          <div class="col-md-2 col-sm-4">
+            <input type="text" class="form-control form-sm">
+          </div>
+          <label for="" class="control-label col-md-1">住所</label>
+          <div class="col-md-4">
+            <input type="text" class="form-control form-sm">
+          </div>
+          <div class="row">
+            <div class="col-md-3">
+              <label for="" class="control-label col-md-5">お客様番号</label>
+              <div class="col-md-7">
+                <input type="text" class="form-control form-sm">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="" class="col-md-2">案件名</label>
+          <div class="col-md-4"><input type="text" class="form-control form-sm"></div>
+          <label for="" class="control-label col-md-1">方面</label>
+          <div class="col-md-2">
+            <select name="" id="" class="form-control">
+              <option value=""></option>
+            </select>
+          </div>
+          <label for="" class="control-label col-md-1">都市/地域</label>
+          <div class="col-md-2">
+            <select name="" id="" class="form-control">
+              <option value=""></option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="" class="col-md-2">カルテ番号</label>
+          <div class="col-md-2"><input type="text" class="form-control form-sm"></div>
+          <label for="" class="col-md-1 control-label">出発日</label>
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-md-5">
+                <input type="text" class="form-control form-sm calendar">
+              </div>
+              <label for="" class="col-md-2 control-label">～</label>
+              <div class="col-md-5">
+                <input type="text" class="form-control form-sm calendar">
+              </div>
+            </div>
+          </div>
+          <label for="" class="col-md-1 control-label">期間</label>
+          <div class="col-md-2">
+            <div class="row">
+              <div class="col-md-5">
+                <input type="text" class="form-control form-sm">
+              </div>
+              <label for="" class="col-md-2 control-label">～</label>
+              <div class="col-md-5">
+                <input type="text" class="form-control form-sm">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="" class="col-md-2">旅行種別</label>
+          <div class="col-md-2">
+            <select name="" id="" class="form-control">
+              <option value=""></option>
+            </select>
+          </div>
+          <label for="" class="control-label col-md-1">参加形態</label>
+          <div class="col-md-2">
+            <select name="" id="" class="form-control">
+              <option value=""></option>
+            </select>
+          </div>
+          <label for="" class="col-md-1 control-label">出発季節</label>
+          <div class="col-md-1">
+            <select name="" id="" class="form-control">
+              <option value=""></option>
+              <option value="">春</option>
+              <option value="">夏</option>
+              <option value="">秋</option>
+              <option value="">冬</option>
+            </select>
+          </div>
+          <label for="" class="col-md-1 control-label">人数</label>
+          <div class="col-md-2">
+            <div class="row">
+              <div class="col-md-5">
+                <input type="text" class="form-control form-sm">
+              </div>
+              <label for="" class="col-md-2 control-label">～</label>
+              <div class="col-md-5">
+                <input type="text" class="form-control form-sm">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="" class="col-md-2">出発月</label>
+          <div class="col-md-1">
+            <select name="" id="" class="form-control form-sm">
+              <option value=""></option>
+              <option value="">1</option>
+              <option value="">2</option>
+              <option value="">3</option>
+              <option value="">4</option>
+              <option value="">5</option>
+              <option value="">6</option>
+              <option value="">7</option>
+              <option value="">8</option>
+              <option value="">9</option>
+              <option value="">10</option>
+              <option value="">11</option>
+              <option value="">12</option>
+            </select>
+          </div>
+          <label for="" class="col-md-1 control-label">帰着日</label>
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-md-5">
+                <input type="text" class="form-control form-sm calendar">
+              </div>
+              <label for="" class="col-md-2 control-label">～</label>
+              <div class="col-md-5">
+                <input type="text" class="form-control form-sm calendar">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="" class="col-md-2">作成日</label>
+          <div class="col-md-2"><input type="text" class="form-control calendar"></div>
+          <label for="" class="col-md-1 control-label">更新日</label>
+          <div class="col-md-2"><input type="text" class="form-control calendar"></div>
+          <div class="col-md-5">
+            <button type="button" class="btn btn-default pull-right">検索</button>
+          </div>
+        </div>
+
+      </form>
+      <!-- 検索条件 End -->
+
+      <!-- 検索結果 Start -->
+      <h3 class="bg-success text-center">お客様カルテ検索結果</h3>
+      <table class="table">
+        <thead>
+          <tr>
+            <th><input type="checkbox" disabled></th>
+            <th></th>
+            <th>方面</th>
+            <th>都市/地域</th>
+            <th>案件名</th>
+            <th>人数</th>
+            <th>代表者名</th>
+            <th>性別</th>
+            <th>年齢</th>
+            <th>出発日</th>
+            <th>帰着日</th>
+            <th>期間</th>
+            <th>予算/総額</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><input type="checkbox"></td>
+            <td>問</td>
+            <td>中国</td>
+            <td>上海</td>
+            <td>中国航空会社</td>
+            <td>1</td>
+            <td>島田　祐介</td>
+            <td>M</td>
+            <td>42</td>
+            <td>2012/03/05(木)</td>
+            <td>2012/03/08(日)</td>
+            <td>4</td>
+            <td class="text-right">&yen;1,000,000</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox"></td>
+            <td>問</td>
+            <td>アジア</td>
+            <td>シンガポール</td>
+            <td>シンガポールのお勧めホテルあああああああああああああああ</td>
+            <td>4</td>
+            <td>島田　陽介</td>
+            <td>M</td>
+            <td>54</td>
+            <td>2012/03/05(木)</td>
+            <td>2012/03/08(日)</td>
+            <td>5</td>
+            <td class="text-right">-</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="row">
+        <div class="col-md-6">
+          <button class="btn btn-primary btn-sm">CSV出力</button>
+          <button class="btn btn-primary btn-sm">印刷</button>
+        </div>
+        <div class="col-md-6">
+          <div style="width:155px;margin-left:auto;">
+            <button class="btn btn-primary btn-sm">新規</button>
+            <button class="btn btn-primary btn-sm">複写</button>
+            <button class="btn btn-primary btn-sm">詳細</button>
+          </div>
+        </div>
+      </div>
+      <!-- 検索結果 End -->
+
+    </div> <!-- /container -->
+
+    <!-- Footer -->
+    <div class="footer">Footer</div>
+
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+    <!--1国際化対応のライブラリをインポート-->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/i18n/jquery-ui-i18n.min.js"></script>
+    <!-- おまかせくん共通 -->
+    <script src="../js/omakase.js" type="text/javascript" charset="utf-8" ></script>
+  </body>
+</html>

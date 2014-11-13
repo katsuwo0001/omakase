@@ -1,0 +1,12 @@
+.list-border {
+	border-left:solid 1px silver;
+	border-top: solid 1px silver;
+	display: inline-block;
+	min-width: 30px;
+}
+
+form.slim-padding * {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
